@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Frontend Mentor | Calculator app</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="fullCalculator">
+        <div class="top">
+            <h1>calc</h1>
+            
+    
+            <div class="topRight">
+                <p>THEME</p>
+                <div>
+                <div class="num">
+                    <p>1</p>
+                    <p>2</p>
+                    <p>3</p>
+                </div>
+                <div class="toggle_btn">
+                    <input class="button" type="radio" name="toggle" id="first" />
+                    <input class="button" type="radio" name="toggle" id="second" />
+                    <input class="button" type="radio" name="toggle" id="third" />
+                  </div>
+                </div>
+            </div>
+        </div>
+            <input type="text" value="" id="screen">
+        <div class="keys">
+            <button  onclick="appendValue (7) ">7</button>
+            <button onclick="appendValue (8)">8</button>
+            <button onclick="appendValue (9) ">9</button>
+            <button  class="Del" onclick =" Del () ">DEL</button>
+            <button onclick="appendValue (4) ">4</button>
+            <button onclick="appendValue (5) ">5</button>
+            <button onclick="appendValue (6) ">6</button>
+            <button class="Add" onclick = "appendValue ('+') ">+</button>
+            <button onclick = "appendValue (3) ">3</button>
+            <button onclick = "appendValue (2) ">2</button>
+            <button onclick = "appendValue (1) ">1</button>
+            <button  onclick = "appendValue ('-') " class="minus">-</button>
+            <button onclick = "appendValue ('.') ">.</button>
+            <button onclick = "appendValue (0) ">0</button>
+            <button onclick = "appendValue ('/') ">/</button>
+            <button class="multiply" onclick = "appendValue ('*') "> x</button>
+            <button class="Cls" onclick = "Cls () ">Reset</button>
+            <button class="equalto" onclick = "Answer() "> = </button>
+
+        </div>
+
+    </div>
+
+    <div class="attribution">
+        Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
+        Coded by <a href="https://github.com/PearlPerfect" target="_blank">Imo Emmanuel</a>.
+      </div>
+    <script src="index.js"></script>
+</body>
+</html>

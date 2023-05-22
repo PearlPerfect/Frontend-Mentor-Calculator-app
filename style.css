@@ -1,0 +1,232 @@
+@import url('https://fonts.googleapis.com/css2?family=League+Spartan:wght@300;400;500;600;700;800&display=swap');
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'League Spartan', sans-serif;
+    }
+
+:root{
+    --main-background: hsl(222, 26%, 31%);
+    --toggle-background:hsl(223, 31%, 20%); 
+    --keypad-background: hsl(223, 31%, 20%);
+    --screen-background: hsl(224, 36%, 15%);
+    --keys-background: hsl(30, 25%, 89%);
+    --keys-hover: hsla(30, 25%, 89%, 0.9);
+    --keys-shadow: hsl(28, 16%, 65%);
+    --keysText-color: hsl(221, 14%, 31%);
+    --reset-background: hsl(225, 21%, 49%);
+    --reset-shadow: hsl(224, 28%, 35%);
+    --equalsTo-background: hsl(6, 63%, 50%);
+    --equalsTo-shadow:  hsl(6, 70%, 34%);
+    --otherTexts-color:hsl(0, 0%, 100%);
+    --toggle-color:hsl(6, 63%, 50%);
+    --screen-col0r:hsl(0, 0%, 100%);
+}
+[data-theme ="Orange"]{
+    --main-background: hsl(0, 0%, 90%);
+    --toggle-background:hsl(0, 5%, 81%); 
+    --keypad-background: hsl(0, 5%, 81%);
+    --screen-background: hsl(0, 0%, 93%);
+    --keys-background: hsl(45, 7%, 89%);
+    --keys-shadow: hsl(35, 11%, 61%);
+    --keysText-color: hsl(60, 10%, 19%);
+    --reset-background:hsl(185, 42%, 37%);
+    --reset-shadow:hsl(185, 58%, 25%);
+    --equalsTo-background: hsl(25, 98%, 40%);
+    --equalsTo-shadow: hsl(25, 99%, 27%);
+    --otherTexts-color:hsl(0, 0%, 100%);
+    --toggle-color:hsl(25, 98%, 40%);
+    --screen-col0r:hsl(60, 10%, 19%);
+}
+[data-theme = "Blue"]{
+    --main-background: hsl(268, 75%, 9%);
+    --toggle-background:hsl(268, 71%, 12%); 
+    --keypad-background: hsl(268, 71%, 12%);
+    --screen-background: hsl(268, 71%, 12%);
+    --keys-background: hsl(268, 47%, 21%);
+    --keys-shadow: hsl(285, 91%, 52%);
+    --keysText-color: hsl(52, 100%, 62%);
+    --reset-background: hsl(281, 89%, 26%);
+    --reset-shadow:hsl(290, 70%, 36%);
+    --equalsTo-background: hsl(176, 100%, 44%);
+    --equalsTo-shadow: hsl(177, 92%, 70%);
+    --otherTexts-color:hsl(0, 0%, 100%);
+    --toggle-color:hsl(176, 100%, 44%);
+    --screen-col0r:hsl(52, 100%, 62%);
+}
+
+body{
+    background: var(--main-background);
+}
+.fullCalculator{
+   
+    width: 450px;
+    height: 100vh;
+    margin: auto;
+}
+.top{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin-top: 10px;
+    color: var(--screen-col0r);
+}
+.topRight{
+    display: flex;
+    gap: 30px;
+
+}
+.topRight p{
+    align-self: flex-end;
+}
+
+.num{
+    display: flex;
+    justify-content: space-around;
+
+}
+
+.toggle_btn{
+    background-color: var(--toggle-background);
+    width: 100px;
+    border-radius: 50px;
+    border: none;
+    padding: 5px;
+    display: flex;
+    justify-content: space-between;
+
+}
+.toggle_btn > input{
+    height: 15px;
+    width: 15px;
+    cursor: pointer;
+    background-color: var(--toggle-color);
+    appearance: none;
+    opacity: 0;
+    border-radius: 50px;
+    
+}
+
+.toggle_btn > input:hover {
+    cursor: pointer;
+  }
+
+  #first{
+    opacity: 1;
+  }
+#screen{
+    width: 450px;
+    height: 80px;
+    margin-top: 15px;
+    border-radius: 10px;
+    border: none;
+    background: var(--screen-background);
+    color: var(--screen-col0r);
+    padding: 10px;
+    text-align: right;
+    font-size: 40px;
+    font-weight: 700;
+}
+.keys{
+    display: grid;
+    grid-template-rows: repeat(5, 50px);
+    grid-template-columns: 86px 86px 86px 86px ;
+    margin-top: 25px;
+    gap: 20px;
+    background: var(--keypad-background);
+    padding: 20px;
+    border-radius: 10px;
+    
+}
+.keys >button{
+    border-radius: 10px;
+    border: none;
+    font-size: 32px;
+    background-color: var(--keys-background);
+    color: var(--keysText-color);
+    box-shadow: 0 5px var(--keys-shadow);
+    cursor: pointer;
+}
+
+.keys .Cls{
+    grid-column: 1 / 3;
+    background-color: var(--reset-background);
+    box-shadow: 0 5px var(--reset-shadow);
+    color: var(--otherTexts-color);
+}
+
+.keys .equalto{
+    grid-column: 3 / 5;
+    background-color: var(--equalsTo-background);
+    box-shadow: 0 5px var(--equalsTo-shadow);
+    color: var(--otherTexts-color);
+}
+
+.keys .Del{
+    background-color: var(--reset-background) ;
+    color: var(--otherTexts-color);
+}
+
+
+.attribution { 
+    font-size: 18px; 
+    text-align: center; 
+    margin-top: 0;
+    color: rgb(87, 146, 161);
+}
+.attribution a { color: hsl(169, 76%, 31%); }
+
+@media screen and (max-width: 360px){
+    .fullCalculator{
+        height: 40vh;
+        margin: auto;
+        width: 340px;
+        padding: 3px;
+    }    
+
+    #screen{
+        width: 340px;
+    }
+    
+    .keys{
+        grid-template-columns: 60px 60px 60px 60px ;
+        padding: 5x;
+    }
+
+    .keys >button{
+        font-size: 25px;
+    }
+}
+
+
+ @media screen and (max-width : 375px){
+    .fullCalculator{
+        height: 80vh;
+        margin: auto;
+        width: 280px;
+        padding: 3px;
+    }
+
+    #screen{
+        width: 280px;
+    }
+
+    .keys{
+        grid-template-columns: 45px 45px 45px 45px ;
+        grid-template-rows: repeat(5, 35px);
+        /* padding: 2px; */
+    }
+
+    .keys >button{
+        font-size: 20px;
+    }
+
+    .attribution { 
+        font-size: 18px; 
+        text-align: center; 
+       width: 280px;
+ }
+}
+
+ 
