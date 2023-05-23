@@ -230,4 +230,34 @@ body{
  }
 }
 
+@media screen and (max-width: 320px){
+    .fullCalculator{
+        height: 80vh;
+        margin: auto;
+        width: 280px;
+        padding: 3px;
+    }
+
+    #screen{
+        width: 280px;
+    }
+
+    .keys{
+        grid-template-columns: 45px 45px 45px 45px ;
+        grid-template-rows: repeat(5, 35px);
+        /* padding: 2px; */
+    }
+
+    .keys >button{
+        font-size: 20px;
+    }
+
+    .attribution { 
+        font-size: 18px; 
+        text-align: center; 
+        width: 280px;
+        margin-top: 50px;
+ }
+}
+
  
