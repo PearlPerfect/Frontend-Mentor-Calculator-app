@@ -105,6 +105,7 @@ body{
     appearance: none;
     opacity: 0;
     border-radius: 50px;
+    outline: 0;
     
 }
 
