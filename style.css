@@ -225,7 +225,8 @@ body{
     .attribution { 
         font-size: 18px; 
         text-align: center; 
-       width: 280px;
+        width: 280px;
+        margin: 10px;
  }
 }
 

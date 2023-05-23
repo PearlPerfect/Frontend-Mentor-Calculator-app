@@ -22,7 +22,7 @@ arr.forEach((element, index) => {
         });
     });
   });
-
+ 
   function appendValue (value){
     screenDisplay.value += value;
   }
