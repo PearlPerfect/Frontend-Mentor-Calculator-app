@@ -38,5 +38,5 @@ arr.forEach((element, index) => {
   function Answer(){
     let equation = screenDisplay.value
     let result = eval(equation)
-    screenDisplay.value = result
+    screenDisplay.value = result;
   }
